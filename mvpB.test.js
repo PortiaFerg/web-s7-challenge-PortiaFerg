@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import axios from 'axios';
-import Form from './frontend/components/Form';
+import Form from './Form';
 
 jest.mock('axios');
 
@@ -130,3 +130,5 @@ function HelloWorld() {
     </div>
   );
 }
+
+export default HelloWorld;
