@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import axios from 'axios';
-import Form from './Form';
+import Form from './frontend/components/Form';
 
 jest.mock('axios');
 
@@ -63,7 +63,7 @@ describe('<HelloWorld /> component', () => {
 // Tests for the Form component
 describe('<Form /> component', () => {
   beforeEach(() => {
-    axios.post.mockResolvedValue({});
+    axios.post.mockResolvedValue({ data: { message: 'Thank you for your order!' } });
     render(<Form />);
   });
 
