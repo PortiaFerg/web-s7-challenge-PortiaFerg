@@ -74,7 +74,7 @@ describe('<Form /> component', () => {
     fireEvent.click(screen.getByText(/Submit Order/i));
 
     await waitFor(() => {
-      expect(screen.getByText(/Thank you for your order with no toppings!/i)).toBeInTheDocument();
+      expect(screen.getByText(/Thank you for your order, John Doe! Your medium pizza with no toppings is on the way./i)).toBeInTheDocument();
     });
 
     expect(screen.getByLabelText(/Full Name/i)).toHaveValue('');
@@ -91,7 +91,7 @@ describe('<Form /> component', () => {
     fireEvent.click(screen.getByText(/Submit Order/i));
 
     await waitFor(() => {
-      expect(screen.getByText(/Thank you for your order with toppings!/i)).toBeInTheDocument();
+      expect(screen.getByText(/Thank you for your order, John Doe! Your large pizza with 2 toppings is on the way./i)).toBeInTheDocument();
     });
 
     expect(screen.getByLabelText(/Full Name/i)).toHaveValue('');
