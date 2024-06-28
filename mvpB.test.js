@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import axios from 'axios';
-import Form from './Form'; // Make sure to adjust the import path as needed
+import Form from './frontend/components/Form';
 
 jest.mock('axios');
 
